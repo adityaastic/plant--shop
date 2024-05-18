@@ -22,12 +22,12 @@ const createPaymentLink= async (orderId)=>{
             email: true,
           },
           reminder_enable: true,
-          callback_url: `https://plant-shop-prhf.onrender.com/payment/${orderId}`,
+          callback_url: `https://plant-shop-rho.vercel.app/payment/${orderId}`,
           callback_method: 'get',
         };
     
 
-        
+
         const paymentLink = await razorpay.paymentLink.create(paymentLinkRequest);
     
         const paymentLinkId = paymentLink.id;
